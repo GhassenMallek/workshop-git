@@ -1,11 +1,15 @@
 package tn.esprit.workshopgit.models;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Job {
     
     private String name;
     private String description;
     private int salary;
     private String location;
+    private List<Person> persons ;
 
     public Job() {
     }
@@ -14,6 +18,7 @@ public class Job {
         this.description = description;
         this.salary = salary;
         this.location = location;
+        this.persons = new ArrayList<>();
     }
     public String getName() {
         return name;
@@ -38,6 +43,12 @@ public class Job {
     }
     public void setLocation(String location) {
         this.location = location;
+    }
+    public List<Person> getPersons() {
+        return persons;
+    }
+    public void setPersons(List<Person> persons) {
+        this.persons = persons;
     }
     @Override
     public String toString() {

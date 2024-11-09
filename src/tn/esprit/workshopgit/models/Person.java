@@ -8,10 +8,11 @@ public class Person {
     private String email;
     private String phone;
     private String password;
+    private Job job;
 
     public Person() {
     }
-    public Person(String name, String address, int age, String email, String phone, String password
+    public Person(String name, String address, int age, String email, String phone, String password, Job job
     ) {
         this.name = name;
         this.address = address;
@@ -19,6 +20,7 @@ public class Person {
         this.email = email;
         this.phone = phone;
         this.password = password;
+        this.job = job;
     }   
     public String getName() {
         return name;
@@ -56,9 +58,15 @@ public class Person {
     public void setPassword(String password) {
         this.password = password;
     }
+    public Job getJob() {
+        return job;
+    }
+    public void setJob(Job job) {
+        this.job = job;
+    }
     @Override
     public String toString() {
         return "Person [address=" + address + ", age=" + age + ", email=" + email + ", name=" + name + ", password="
-                + password + ", phone=" + phone + "]";
+                + password + ", phone=" + phone + ", job name =" + job.getName() + "]";
     }
 }
